@@ -4,4 +4,4 @@ from django.http import HttpResponse  # импорт для функции index
 
 
 def index(request):
-    return HttpResponse("Hello from the SHop app")
+    return HttpResponse("Hello from the Shop app")
