@@ -10,7 +10,7 @@ class Category(models.Model):
 
 
 class Course(models.Model):
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=300)
     price = models.FloatField()
     student_qty = models.IntegerField()
     reviews_qty = models.IntegerField()
