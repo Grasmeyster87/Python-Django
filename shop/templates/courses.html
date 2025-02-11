@@ -1,6 +1,9 @@
 <!--создаем разметку через эмет снипеты-->
 <!-- table>(thead>tr>th*5)(tbody>tr>td*5) + TAB-->
 {%  extends 'base.html' %} <!-- расширяем шаблон base -->
+
+{%block title%}All courses{% endblock %}
+
 {% block content %} <!-- назначили блок который расширяет шаблон base-->
 <table class="table mt-5 table-bordered table-striped table-hover">
     <thead class="table-dark">
