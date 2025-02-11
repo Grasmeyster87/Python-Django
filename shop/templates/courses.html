@@ -1,9 +1,7 @@
 <!--создаем разметку через эмет снипеты-->
 <!-- table>(thead>tr>th*5)(tbody>tr>td*5) + TAB-->
- <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
- </head>
+{%  extends 'base.html' %} <!-- расширяем шаблон base -->
+{% block content %} <!-- назначили блок который расширяет шаблон base-->
 <table class="table mt-5 table-bordered table-striped table-hover">
     <thead class="table-dark">
         <tr>
@@ -27,3 +25,4 @@
         {% endfor %} <!-- конец цикла for -->
     </tbody>
 </table>    
+{% endblock %}
