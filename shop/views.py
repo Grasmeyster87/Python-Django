@@ -9,4 +9,5 @@ def index(request):
     courses = Course.objects.all()
     # return HttpResponse("Hello from the Shop app")
     # return HttpResponse(''.join([str(course) + '<br>' for course in courses]))
-    return HttpResponse(courses)
+    # return HttpResponse(courses)
+    return render(request, 'courses.html')
