@@ -10,4 +10,4 @@ def index(request):
     # return HttpResponse("Hello from the Shop app")
     # return HttpResponse(''.join([str(course) + '<br>' for course in courses]))
     # return HttpResponse(courses)
-    return render(request, 'courses.html')
+    return render(request, 'courses.html',{'courses':courses})
