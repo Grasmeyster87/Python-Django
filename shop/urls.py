@@ -3,5 +3,6 @@ from . import views  # импорт из той папки где находит
 
 urlpatterns = [
     path('', views.index, name='index')  # импорт функции для маршрута
+    path('<int:course_id>', views.single_course, name='single_course')
 ]
 # '' главный путь маршрута
