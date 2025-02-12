@@ -19,9 +19,13 @@
         <!--{{courses}} переменная в шаблоне Django -->
         {% for course in courses %} <!-- скобки для использования цикла python-->
         <tr>            
-            <td><!--<a href={{course.id}}>{{course.title}}</a> относительная ссылка а ниже абсолютная-->
-                <!--<a href="/shop/{{course.id}}"">{{course.title}}</a>-->
-                <a href={%  url "single_course" course.id %}>{{course.title}}</a>
+            <td>{% verbatim %}
+                <!-- Обычный текст-->
+                <!--#<a href={{course.id}}>{{course.title}}</a> относительная ссылка а ниже абсолютная-->
+                <!--#<a href="/shop/{{course.id}}"">{{course.title}}</a>-->
+                <!--#<a href={%  url "single_course" course.id %}>{{course.title}}</a>-->
+                {% endverbatim %}
+                <a href={%  url "shop:single_course" course.id %}>{{course.title}}</a>  <!-- app_name-->
             </td>
             <td>{{course.category}}</td>
             <td>{{course.price}}</td>
