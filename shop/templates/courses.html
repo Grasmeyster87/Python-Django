@@ -18,8 +18,10 @@
     <tbody>
         <!--{{courses}} переменная в шаблоне Django -->
         {% for course in courses %} <!-- скобки для использования цикла python-->
-        <tr>
-            <td>{{course.title}}</td>
+        <tr>            
+            <td><a href={{course.id}}>{{course.title}}</a> относительная ссылка а ниже абсолютная
+                <!--<a href="/shop/{{course.id}}"">{{course.title}}</a>-->
+            </td>
             <td>{{course.category}}</td>
             <td>{{course.price}}</td>
             <td>{{course.student_qty}}</td>
