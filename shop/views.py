@@ -11,3 +11,7 @@ def index(request):
     # return HttpResponse(''.join([str(course) + '<br>' for course in courses]))
     # return HttpResponse(courses)
     return render(request, 'courses.html',{'courses':courses})
+
+def single_course(request, course_id):
+    course = Course.objects.get(pk=course_id)
+    return render(request, 'single_course.html',{'course': course})
